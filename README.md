@@ -16,6 +16,51 @@
 
     cargo new --lib name-library
 
+## data types
+
+### integer
+<table>
+    <tr>
+        <td>Length</td>
+        <td>Signed</td>
+         <td>Unsigned</td>
+    </tr>
+    <tr>
+        <td>8-bit</td>
+        <td>i8</td>
+        <td>u8</td>
+    </tr>
+    <tr>
+        <td>16-bit</td>
+        <td>i16</td>
+        <td>u16</td>
+    </tr>
+    <tr>
+        <td>32-bit</td>
+        <td>i32</td>
+        <td>u32</td>
+    </tr>
+    <tr>
+        <td>64-bit</td>
+        <td>i64</td>
+        <td>u64</td>
+    </tr>
+    <tr>
+        <td>128-bit</td>
+        <td>i128</td>
+        <td>u128</td>
+    </tr>
+    <tr>
+        <td>arch</td>
+        <td>isize</td>
+        <td>u</td>
+    </tr>
+</table>
+
+### floating-point
+
+
+
 ## variables
 ```Rust
 let name_vari_no_mut = "hello, world";

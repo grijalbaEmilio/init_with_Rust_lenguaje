@@ -1,28 +1,23 @@
+mod in_memory_task_repo;
+mod abstract_repo;
+mod task;
+use task::Task;
+use chrono::NaiveDate;
+use in_memory_task_repo::InMemoryTaskRepo;
+use abstract_repo::AbstractRepo;
+
+/// axum backend
+/// axis backend
+/// rocket backend
+
 fn main() {
- 
-    // static in stack
-    let vari = "world";
-    // dinamic in heap
-    let x = String::from("this is not &str");
-    let mut y = vari;
+    //let date: NaiveDate = NaiveDate::from_ymd(2022, 09, 20);
+    let task_one = Task::new("task 001".to_string(), false, None);
+    task_one.print_create_date();
 
-    let num: i32 = 4;
+    let mut task_repo = InMemoryTaskRepo::new();
+    task_repo.add(task_one);
+    // task_repo.add(task_one);
 
-    let mut num2 = num;
-
-    num2 = 23;
-
-    print!("num1: {num}\nnum2: {num2}\n");
-
-    y = "re assign";
-
-    /* println!("\nvari is : {vari}");
-    println!("x is : {x}");
-    println!("y is : {y}\n");
-    println!() */
-    
-}
-
-fn use_string(s: &str){
-    print!("{s}")
+    println!("\n{}\n", task_repo);
 }
